@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'first_open1.dart'; // تأكد من استيراد الصفحة الجديدة
+import 'first_open1.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset('lib/images/mit.png'), // تأكد من وجود الصورة في هذا المسار
+        child: Image.asset('lib/images/mit.png'),
       ),
     );
   }

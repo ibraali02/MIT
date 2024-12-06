@@ -6,22 +6,21 @@ class FirstUpPage extends StatefulWidget {
 }
 
 class _FirstUpPageState extends State<FirstUpPage> {
-  String selectedAge = ''; // حالة تخزين الفئة العمرية المختارة
+  String selectedAge = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         backgroundColor: Colors.blue,
-        iconTheme: IconThemeData(color: Colors.white), // لون الأيقونات في شريط العنوان
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
             'Choose Your Age',
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.blue), // لون النص
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.blue),
           ),
           SizedBox(height: 20),
           Row(
@@ -75,7 +74,7 @@ class _FirstUpPageState extends State<FirstUpPage> {
                 },
                 child: Text(
                   'Skip',
-                  style: TextStyle(color: Colors.white), // لون النص
+                  style: TextStyle(color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
                   shape: CircleBorder(),
@@ -89,7 +88,7 @@ class _FirstUpPageState extends State<FirstUpPage> {
                 },
                 child: Text(
                   'Continue',
-                  style: TextStyle(color: Colors.white), // لون النص
+                  style: TextStyle(color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
                   shape: CircleBorder(),
@@ -124,38 +123,36 @@ class AgeOption extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap, // عند النقر يتم تنفيذ الوظيفة
+      onTap: onTap,
       child: Container(
         width: 100,
         height: height,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: Color(0xFFE0A800), // لون أغمق من اللون الأصفر السابق
+          color: Color(0xFFE0A800),
         ),
         child: Column(
           children: <Widget>[
-            // الربع العلوي الأبيض أو الأزرق
             Container(
-              height: height * 0.1, // مساحة الجزء العلوي
+              height: height * 0.1,
               decoration: BoxDecoration(
-                color: isSelected ? Colors.blue : Colors.white, // تغيير اللون عند الاختيار
+                color: isSelected ? Colors.blue : Colors.white,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
               ),
             ),
-            // الصورة والنص في المنتصف
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Image.asset(
                     imagePath,
-                    height: height * 0.4, // ضبط حجم الصورة
+                    height: height * 0.4,
                     fit: BoxFit.contain,
                   ),
                   SizedBox(height: 10),
                   Text(
                     text,
-                    style: TextStyle(fontSize: 18, color: Colors.blue), // لون النص
+                    style: TextStyle(fontSize: 18, color: Colors.blue),
                   ),
                 ],
               ),

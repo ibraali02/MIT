@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'first_up.dart';
-import 'login_page.dart'; // تأكد من استيراد الصفحة الجديدة
+
+import 'login_page.dart';
 
 class FirstOpen1 extends StatelessWidget {
   @override
@@ -9,27 +9,27 @@ class FirstOpen1 extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('lib/images/first1.jpg'), // تأكد من وجود الصورة في هذا المسار
-            fit: BoxFit.cover, // لتغطية الخلفية بالكامل
+            image: AssetImage('lib/images/first1.jpg'),
+            fit: BoxFit.cover,
           ),
         ),
         child: Stack(
           children: [
 
             Positioned(
-              bottom: 50, // المسافة من أسفل الشاشة
-              left: MediaQuery.of(context).size.width / 2 - 30, // محاذاة الزر في المنتصف
+              bottom: 50,
+              left: MediaQuery.of(context).size.width / 2 - 30,
               child: CircleAvatar(
-                radius: 30, // نصف قطر الزر
-                backgroundColor: Colors.orange, // لون الزر
+                radius: 30,
+                backgroundColor: Colors.orange,
                 child: IconButton(
                   icon: Icon(
-                    Icons.arrow_forward, // أيقونة السهم
-                    color: Colors.white, // لون الأيقونة
+                    Icons.arrow_forward,
+                    color: Colors.white,
                   ),
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => LoginPage()), // الانتقال إلى الصفحة الجديدة
+                      MaterialPageRoute(builder: (context) => LoginPage()),
                     );
                   },
                 ),
